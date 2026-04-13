@@ -2,7 +2,14 @@ const express = require("express");
 const fs = require("fs");
 
 const app = express();
-const PORT = 3000;
+const PORT = process.env.PORT || 3000;
+const cors = require("cors");
+
+app.use(cors({
+  origin: "*",
+  methods: ["GET", "POST", "PUT", "DELETE"],
+  allowedHeaders: ["Content-Type"]
+}));
 
 app.use(express.json()); 
 const filePath = "./data/users.json";
@@ -99,4 +106,4 @@ app.delete("/users/:id", (req, res) => {
 
 app.listen(PORT, () => {
   console.log(`Servidor corriendo en http://localhost:${PORT}`);
-}); 
+});
