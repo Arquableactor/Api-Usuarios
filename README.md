@@ -1,1 +1,1 @@
-User REST API built with Node.js and Express, deployed on Render, with a basic frontend for testing and interaction.
+API REST básica para la gestión de usuarios, desarrollada con Node.js y Express, incluyendo operaciones CRUD, validaciones y despliegue en Render.
